@@ -1,0 +1,50 @@
+*{box-sizing: border-box;}
+#myform{
+    width: 400px;
+    margin: 3em auto;
+    background-color: lightcoral;
+    padding: 2em;
+}
+.btnsubmit{
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    padding: 0.5em;
+    margin-top: 2em;
+    border: none;
+    border-radius: 5px;
+}
+.btnsubmit:hover{
+    background-color: brown;
+}
+.greeting{
+    width: 400px;
+    margin: auto;
+}
+.greetuser{
+    color: brown;
+    font-weight: bolder;
+}
+.formcontrol{
+    margin: 2em;
+}
+label{
+    display: inline-block;
+    width: 30%;
+    color: blue;
+}
+input{
+    display: inline-block;
+    width: 100%;
+    color: blue;
+    padding: 0.5em;
+}
+.eerormsg{
+    color: red;
+    font-size: 0.8em;
+}
+.btnsubmit:disabled{
+    background-color: darkgray;
+    cursor: not-allowed;
+    color: blue;
+}
