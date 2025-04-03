@@ -1,129 +1,165 @@
-*{box-sizing: border-box;} /*preserve the 100% width of the screen*/
-img{width: 100%;}
-.header{
-    background-color: pink;
-    display: flex;
-}
-.logo{
-    width: 10%;
-    border: solid  red 1px;
-    padding: 1em;
-    margin-left: 5%;
-}
-.title{
-    width: 100%;
-    border: solid blue 1px;
-    text-align: center;
-    padding: 1em;
-    font-size: 2em;
-    color: darkblue;
-    font-family: 'Franklin Gothic Medium';
-}
-.quicklinks{
-    width: 20%;
-    font-size: 1.5em;
-    border: solid green 1px; 
-    margin-left: auto;
-    display: flex;
-}
-.quicklinks a{
-    display: inline-block;
-    width: 40%;
-    text-align: right;
-    padding: 1.2em 0.2em;
-    text-decoration: none;
-}
-.quicklinks a:hover{
-    opacity: 0.6;
-    transform: scale(1.05);
-}
-/*NAVLINKS*/
-.navlinks{
-    width: 100%;
-    background-color: aliceblue;
-}
-.navlinks a{
-    display: inline-block;
-    width: 20%;
-    text-align: center;
-    padding: 1em;
-    font-size: 1.2em;
-    color: darkblue;
-    text-decoration: none;
-}
-.navlinks a:hover{
-    background-color: chartreuse;
-}
-/*MAIN - INTRO IMAGE*/
-.introimage{
-    position: relative;
-}
-.intro{
-    position: absolute;
-    bottom:20%;
-    right:10%;
-    background-color: rgba(200,200,200, 0.6);
-    padding: 1em 2em;
-    border-radius: 12px;
-}
-.intro h1{
-    color: darkblue;
-}
-.into p{
-    font-size: 1.2em;
-}
-/* CARDS */
-.subtitle{
-    text-align: center;
-}
-.cardscontainer{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-.card{
-    height: auto;
-    width: 30%;
-    box-shadow: 1px 1px 5px gray;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 1%;
-}
-.card img{
-    height: 400;
-}
-.card p{
-    padding: 1em;
-}
-.card a{
-    display: block;
-    background-color: darkblue;
-    padding: 1em;
-    color: whitesmoke;
-    text-align: center;
-    font-weight: 900;
-    text-decoration: none;
-}
-.card a:hover{
-    opacity: 0.6;
-    font-size: 1,05em;
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  }
+
+h1 {
+  margin-top: 0;
+  
+  
 }
 
 
 
-/* More code missing to be added later */
 
 
-/* FOOTER */
-.footer{
-    margin-top: 2em;
-    text-align: center;
-    background-color: darkblue;
-    color: azure;
-    padding: 3em;
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  justify-content: center;
+  gap: 50px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-body{
-    background-color: lightgreen;
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 320px;
+  height: auto;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  border: 3px solid #ffb74d;
+  border-radius: 12px;
+  background-color: #fffde7;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #fff9c4;
+}
+
+.card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#output {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffcc80;
+  color: black;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+}
+
+#topBtn:hover {
+  background-color: #ffa726;
+}
+
+body {
+  animation: fade-in 0.6s ease-in-out;
+
+  }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.message-box {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  min-height: 150px;
+  background-color: #fff8e1;
+  border: 2px solid #ffcc80;
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 999;
+  font-size: 1em;
+  color: #333;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #ffcc80;
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+.home-button:hover {
+  background-color: #ffa726;
+}
+
+.card p {
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 0 5px;
 }
