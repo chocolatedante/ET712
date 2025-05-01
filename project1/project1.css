@@ -55,6 +55,12 @@ h1 {
   margin-bottom: 10px;
 }
 
+.card img.circle-image {
+width: 250px;
+height: 250px;
+margin-bottom: 10px;
+}
+
 #output {
   font-weight: bold;
   font-size: 1.2em;
